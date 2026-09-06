@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Curso de ejemplo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --fondo:#EDF1F4;
+    --panel:#FFFFFF;
+    --tinta:#16202B;
+    --tinta-suave:#5D6D7C;
+    --azul:#2E4EA0;
+    --verde:#1B7A50;
+    --verde-claro:#E4F1EA;
+    --rojo:#A81F2A;
+    --rojo-claro:#F8E7E7;
+    --linea:#D4DBE2;
+    --serif:"Literata",Georgia,"Times New Roman",serif;
+    --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--fondo);color:var(--tinta);font-family:var(--sans);
+    font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;
+  }
+  .envoltura{max-width:42rem;margin:0 auto;padding:3rem 1.25rem 5rem}
+  button{font-family:inherit;font-size:inherit;color:inherit;cursor:pointer}
+  a{color:var(--azul)}
+  :focus-visible{outline:2px solid var(--azul);outline-offset:2px}
+
+  .curso-titulo{
+    font-family:var(--serif);font-size:clamp(2rem,7vw,2.9rem);font-weight:600;
+    line-height:1.1;letter-spacing:-.015em;margin:0 0 .5rem;
+  }
+  .curso-dato{color:var(--tinta-suave);margin:0 0 2.5rem;font-size:.95rem}
+
+  .lista{list-style:none;margin:0;padding:0;border-top:1px solid var(--linea)}
+  .lista li{border-bottom:1px solid var(--linea)}
+  .clase{
+    width:100%;background:none;border:0;text-align:left;text-decoration:none;color:inherit;
+    display:grid;grid-template-columns:2.75rem 1fr auto;align-items:baseline;gap:1rem;
+    padding:1.15rem .5rem;transition:background .12s ease;
+  }
+  .clase:hover{background:var(--panel)}
+  .clase-num{font-family:var(--serif);font-size:1.35rem;color:var(--azul)}
+  .clase-titulo{font-weight:500}
+  .clase-meta{color:var(--tinta-suave);font-size:.875rem;white-space:nowrap}
+  .nota{margin-top:2.5rem;color:var(--tinta-suave);font-size:.9rem}
+
+  .barra-sup{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:1.5rem}
+  .barra-sup h2{font-size:.95rem;font-weight:500;margin:0;color:var(--tinta-suave)}
+  .volver{color:var(--tinta-suave);font-size:.9rem;text-decoration:underline}
+  .volver:hover{color:var(--tinta)}
+
+  .tira{display:flex;gap:3px;margin-bottom:.75rem}
+  .tira span{flex:1;height:4px;border-radius:2px;background:var(--linea)}
+  .tira .bien{background:var(--verde)}
+  .tira .mal{background:var(--rojo)}
+  .tira .activa{background:var(--azul)}
+  .contador{color:var(--tinta-suave);font-size:.85rem;margin:0 0 1.75rem}
+
+  .enunciado{
+    font-family:var(--serif);font-size:clamp(1.3rem,4.2vw,1.6rem);
+    font-weight:400;line-height:1.35;margin:0 0 1.75rem;
+  }
+  .opciones{display:flex;flex-direction:column;gap:.6rem}
+  .opcion{
+    display:grid;grid-template-columns:1.75rem 1fr;gap:.85rem;align-items:start;
+    width:100%;text-align:left;padding:.95rem 1.1rem;background:var(--panel);
+    border:1px solid var(--linea);border-radius:6px;
+    transition:border-color .12s ease,background .12s ease;
+  }
+  .opcion:hover:not(:disabled){border-color:var(--azul)}
+  .opcion:disabled{cursor:default}
+  .letra{font-family:var(--serif);color:var(--tinta-suave)}
+  .opcion.correcta{border-color:var(--verde);background:var(--verde-claro)}
+  .opcion.correcta .letra{color:var(--verde)}
+  .opcion.fallada{border-color:var(--rojo);background:var(--rojo-claro)}
+  .opcion.fallada .letra{color:var(--rojo)}
+  .opcion.apagada{opacity:.5}
+
+  .respuesta{margin-top:1.5rem}
+  .veredicto{font-weight:600;margin:0 0 .4rem}
+  .veredicto.bien{color:var(--verde)}
+  .veredicto.mal{color:var(--rojo)}
+  .explicacion{margin:0;color:var(--tinta-suave)}
+
+  .boton{
+    margin-top:1.75rem;background:var(--azul);color:#fff;border:0;text-decoration:none;
+    display:inline-block;padding:.8rem 1.5rem;border-radius:6px;font-weight:500;
+  }
+  .boton:hover{background:#25407F;color:#fff}
+  .boton.secundario{background:none;color:var(--azul);border:1px solid var(--linea);margin-left:.5rem}
+  .boton.secundario:hover{background:var(--panel);border-color:var(--azul)}
+  .pista-teclado{color:var(--tinta-suave);font-size:.8rem;margin:1rem 0 0}
+
+  .marcador{font-family:var(--serif);font-size:4rem;line-height:1;margin:0 0 .35rem}
+  .marcador small{font-size:1.5rem;color:var(--tinta-suave)}
+  .comentario{margin:0 0 2.5rem;color:var(--tinta-suave)}
+  .repaso h3{font-size:1rem;font-weight:600;margin:0 0 1rem;padding-bottom:.6rem;border-bottom:1px solid var(--linea)}
+  .fallo{margin-bottom:1.75rem}
+  .fallo p{margin:0 0 .35rem}
+  .fallo .preg{font-family:var(--serif);font-size:1.05rem}
+  .fallo .dato{font-size:.9rem;color:var(--tinta-suave)}
+  .fallo .dato b{color:var(--verde);font-weight:500}
+
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="envoltura">
+  <h1 class="curso-titulo">Curso de ejemplo</h1>
+  <p class="curso-dato">3 clases, 14 preguntas en total</p>
+
+  <!-- Para agregar una clase: duplicá un bloque <li> y cambiá el archivo,
+       el número y el título. -->
+  <ul class="lista">
+        <li>
+          <a class="clase" href="clase-01.html">
+            <span class="clase-num">1</span>
+            <span class="clase-titulo">Ejemplo 1: cómo se estudia mejor</span>
+            <span class="clase-meta">4 preguntas</span>
+          </a>
+        </li>
+        <li>
+          <a class="clase" href="clase-02.html">
+            <span class="clase-num">2</span>
+            <span class="clase-titulo">Ejemplo 2: leer datos sin equivocarse</span>
+            <span class="clase-meta">5 preguntas</span>
+          </a>
+        </li>
+        <li>
+          <a class="clase" href="clase-03.html">
+            <span class="clase-num">3</span>
+            <span class="clase-titulo">Ejemplo 3: trabajo en equipo y feedback</span>
+            <span class="clase-meta">5 preguntas</span>
+          </a>
+        </li>
+  </ul>
+
+  <p class="nota">Cada clase es un archivo aparte. Las preguntas y las respuestas
+  aparecen en orden distinto cada vez.</p>
+</div>
+</body>
+</html>
