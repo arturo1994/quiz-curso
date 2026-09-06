@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ejemplo 1: cómo se estudia mejor</title>
+<title>Making changes to my routine (EN_B1_2011X)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet">
@@ -128,53 +128,152 @@
    ===================================================================== */
 
 const CLASE = {
-  titulo: "Ejemplo 1: cómo se estudia mejor",
-  siguiente: "clase-02.html",
+  titulo: "Making changes to my routine (EN_B1_2011X)",
+  siguiente: null,   // acá va el nombre del archivo de la clase siguiente
 
   preguntas: [
     {
-      enunciado: "Estudiaste un tema releyendo tus apuntes cinco veces y te sentiste seguro. En el examen no te salió nada. ¿Qué explica mejor lo que pasó?",
+      enunciado: "I usually ___ dinner at eight, but this week I ___ earlier because of my new schedule.",
       opciones: [
-        "No dedicaste suficiente tiempo al tema",
-        "Releer genera sensación de familiaridad, que no es lo mismo que poder recuperar la información",
-        "El examen evaluaba contenidos distintos a los apuntes",
-        "Estudiaste demasiado seguido y saturaste la memoria"
+        "am having / eat",
+        "have / am eating",
+        "have / eat",
+        "am having / am eating"
       ],
       correcta: 1,
-      explicacion: "Reconocer un texto es mucho más fácil que producirlo de memoria. Releer entrena el reconocimiento, pero el examen te pide recuperación. Por eso conviene cerrar los apuntes y forzarte a responder."
+      explicacion: "La rutina de siempre va en present simple (have) y el cambio de esta semana va en present continuous (am eating). Esa es la oposición central de la clase: lo que hacés habitualmente contra lo que estás haciendo en este momento de tu vida."
     },
     {
-      enunciado: "Tenés cuatro horas para preparar un tema. ¿Qué reparto es más efectivo?",
+      enunciado: "Which group of expressions signals a temporary change rather than a fixed habit?",
       opciones: [
-        "Cuatro horas seguidas el día anterior",
-        "Dos horas de lectura y dos de subrayado",
-        "Da igual: lo que importa es el total de horas",
-        "Cuatro sesiones de una hora repartidas a lo largo de la semana"
-      ],
-      correcta: 3,
-      explicacion: "El repaso espaciado gana casi siempre frente a la misma cantidad de horas juntas. Cada vez que recuperás algo después de haberlo olvidado un poco, la huella se refuerza más."
-    },
-    {
-      enunciado: "¿Cuál de estas preguntas evalúa comprensión en lugar de memoria literal?",
-      opciones: [
-        "¿En qué año se formuló la teoría?",
-        "¿Cómo se llama el autor del modelo?",
-        "Dado este caso concreto, ¿qué predice el modelo y por qué?",
-        "Enumerá las cinco etapas del proceso"
+        "usually, most days, always",
+        "rarely, every now and again, three times a week",
+        "currently, these days, at the moment",
+        "every day, every night, most nights"
       ],
       correcta: 2,
-      explicacion: "Las otras tres se responden repitiendo un dato. La correcta te obliga a aplicar el modelo a una situación nueva, que es lo que demuestra que lo entendiste."
+      explicacion: "Esas tres marcan que algo pasa ahora, durante un período limitado, y por eso arrastran present continuous. Las otras dicen con qué frecuencia pasa algo de manera habitual y van con present simple."
     },
     {
-      enunciado: "Al escribir opciones de un test, ¿por qué importa que las incorrectas sean plausibles?",
+      enunciado: "Where does 'rarely' go in the sentence 'I leave the office before six'?",
       opciones: [
-        "Porque si son absurdas se acierta por descarte y no se evalúa nada",
-        "Para que el test parezca más profesional",
-        "Porque alarga el tiempo de resolución",
-        "Porque así se pueden reutilizar en otras preguntas"
+        "I leave rarely the office before six.",
+        "Rarely I leave the office before six.",
+        "I leave the office rarely before six.",
+        "I rarely leave the office before six."
+      ],
+      correcta: 3,
+      explicacion: "Los adverbios de frecuencia van delante del verbo principal. La excepción es el verbo to be, donde van detrás: I am rarely late. En español el adverbio se mueve con mucha libertad, y de ahí sale el error."
+    },
+    {
+      enunciado: "A swimmer tells you: 'I need at least eight hours of sleep.' How do you say this about her?",
+      opciones: [
+        "She needs at least eight hours of sleep.",
+        "She need at least eight hours of sleep.",
+        "She is needing at least eight hours of sleep.",
+        "She needing at least eight hours of sleep."
       ],
       correcta: 0,
-      explicacion: "Una opción incorrecta buena recoge un error real que alguien podría cometer. Si las alternativas son ridículas, acertás sin saber el tema y la pregunta no te enseña nada."
+      explicacion: "En present simple la tercera persona del singular lleva -s. Además need es un verbo de estado: no se usa en continuous aunque estés hablando del presente."
+    },
+    {
+      enunciado: "You go to the cinema about once every two months. Which expression fits best?",
+      opciones: [
+        "every now and again",
+        "most days",
+        "three times a week",
+        "always"
+      ],
+      correcta: 0,
+      explicacion: "Every now and again describe algo ocasional y sin regularidad fija. Most days y three times a week son mucho más frecuentes, y always es constante."
+    },
+    {
+      enunciado: "Someone says: 'He's always leaving his dishes in the sink.' Why the present continuous with 'always'?",
+      opciones: [
+        "Because it is a plan for next week",
+        "Because 'always' can only be used with the continuous",
+        "Because it is a temporary change he started this month",
+        "Because it stresses that it happens over and over again"
+      ],
+      correcta: 3,
+      explicacion: "Con always el present continuous no marca algo temporal sino algo que se repite todo el tiempo, casi como un rasgo de la persona. Muchas veces lleva un tono de queja, y ahí está la diferencia con He always leaves his dishes in the sink, que es un dato neutro."
+    },
+    {
+      enunciado: "It's important to ___ an effort to call old friends every now and again.",
+      opciones: [
+        "do",
+        "take",
+        "make",
+        "have"
+      ],
+      correcta: 2,
+      explicacion: "En inglés se dice make an effort. Como en español decimos hacer un esfuerzo, la tentación es traducir con do, pero suena mal. Pasa lo mismo con make a decision y make a mistake."
+    },
+    {
+      enunciado: "It's a good idea to focus ___ changing one habit at a time.",
+      opciones: [
+        "in",
+        "at",
+        "to",
+        "on"
+      ],
+      correcta: 3,
+      explicacion: "El verbo es focus on. Como en español es enfocarse en, muchos hispanohablantes dicen focus in. La preposición se aprende pegada al verbo, no se traduce."
+    },
+    {
+      enunciado: "Your friend says she is trying out a new evening routine to sleep better. What does this mean?",
+      opciones: [
+        "She has already found the routine that works for her",
+        "She is testing it to see whether it works",
+        "She is making a big effort but failing",
+        "She has decided to stop going to bed late"
+      ],
+      correcta: 1,
+      explicacion: "To try something out es probar algo para ver qué tal resulta, sin haber decidido todavía. No confundir con to try hard, que es esforzarse."
+    },
+    {
+      enunciado: "A colleague says it is difficult for him to stick to a routine. What is difficult for him?",
+      opciones: [
+        "Designing a routine in the first place",
+        "Explaining his routine to other people",
+        "Keeping to the routine over time",
+        "Changing his routine when he needs to"
+      ],
+      correcta: 2,
+      explicacion: "To stick to something es mantenerlo, seguirlo sin abandonarlo. El problema no es armar la rutina sino sostenerla."
+    },
+    {
+      enunciado: "What does the expression 'No two days are the same' tell you about someone's job?",
+      opciones: [
+        "They work exactly the same hours every day",
+        "They only work two days a week",
+        "They do not enjoy their job",
+        "Their days are all different from each other"
+      ],
+      correcta: 3,
+      explicacion: "Es una expresión hecha: literalmente no hay dos días iguales. Describe variedad, no una queja ni un horario concreto."
+    },
+    {
+      enunciado: "Which of these is an example of self-care?",
+      opciones: [
+        "Going for a walk with a friend after a long day",
+        "Staying late at the office to finish a project",
+        "Checking your work email before going to sleep",
+        "Skipping lunch so you can get more done"
+      ],
+      correcta: 0,
+      explicacion: "Self-care son las cosas que hacés para cuidar tu propio bienestar. Las otras tres son lo contrario: poner el trabajo por delante tuyo."
+    },
+    {
+      enunciado: "A colleague brings you a coffee on a hard morning and you say: 'That made my day!' What are you expressing?",
+      opciones: [
+        "That you are annoyed and very busy",
+        "That your working day is now finished",
+        "That the small gesture made you feel really good",
+        "That you had planned it that way"
+      ],
+      correcta: 2,
+      explicacion: "(It) made my day se dice cuando algo lindo te alegra el día, aunque sea un detalle mínimo. No tiene nada que ver con terminar la jornada."
     }
   ]
 };
