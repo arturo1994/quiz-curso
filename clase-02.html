@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Making changes to my routine (EN_B1_2011X)</title>
+<title>Using the present simple passive (EN_B1_2012G)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet">
@@ -128,152 +128,163 @@
    ===================================================================== */
 
 const CLASE = {
-  titulo: "Making changes to my routine (EN_B1_2011X)",
-  siguiente: "clase-02.html",
+  titulo: "Using the present simple passive (EN_B1_2012G)",
+  siguiente: null,   // acá va el nombre del archivo de la clase siguiente
 
   preguntas: [
     {
-      enunciado: "I usually ___ dinner at eight, but this week I ___ earlier because of my new schedule.",
+      enunciado: "In this region, coffee ___ with hot milk.",
       opciones: [
-        "am having / eat",
-        "have / am eating",
-        "have / eat",
-        "am having / am eating"
+        "is serve",
+        "serves",
+        "is served",
+        "is serving"
+      ],
+      correcta: 2,
+      explicacion: "El pasivo se arma con el verbo be más el participio pasado: is served. Ojo con is serving, que se parece pero es present continuous activo y significaría que el café está sirviendo algo."
+    },
+    {
+      enunciado: "These cakes ___ in a wood oven.",
+      opciones: [
+        "are baked",
+        "is baked",
+        "are baking",
+        "bakes"
+      ],
+      correcta: 0,
+      explicacion: "El verbo be concuerda con el sujeto de la frase pasiva. Como cakes es plural, va are. El participio nunca cambia: baked se queda igual en singular y en plural."
+    },
+    {
+      enunciado: "Turn this into the passive: 'People eat rice with almost every meal here.'",
+      opciones: [
+        "Rice eats with almost every meal here.",
+        "Rice is eating with almost every meal here.",
+        "Rice are eaten with almost every meal here.",
+        "Rice is eaten with almost every meal here."
+      ],
+      correcta: 3,
+      explicacion: "El objeto de la frase activa (rice) pasa a ser el sujeto, y people desaparece porque no aporta nada. Rice es singular, así que va is, y el participio de eat es eaten."
+    },
+    {
+      enunciado: "In my country, this tea ___ hot and without sugar.",
+      opciones: [
+        "is drank",
+        "is drunk",
+        "is drinked",
+        "drinks"
       ],
       correcta: 1,
-      explicacion: "La rutina de siempre va en present simple (have) y el cambio de esta semana va en present continuous (am eating). Esa es la oposición central de la clase: lo que hacés habitualmente contra lo que estás haciendo en este momento de tu vida."
+      explicacion: "Drink hace drank en pasado simple y drunk en participio. El pasivo pide siempre el participio, no el pasado. Es el error más habitual con los verbos irregulares: is drank suena natural pero está mal."
     },
     {
-      enunciado: "Which group of expressions signals a temporary change rather than a fixed habit?",
+      enunciado: "A meal ___ complete without a soup.",
       opciones: [
-        "usually, most days, always",
-        "rarely, every now and again, three times a week",
-        "currently, these days, at the moment",
-        "every day, every night, most nights"
-      ],
-      correcta: 2,
-      explicacion: "Esas tres marcan que algo pasa ahora, durante un período limitado, y por eso arrastran present continuous. Las otras dicen con qué frecuencia pasa algo de manera habitual y van con present simple."
-    },
-    {
-      enunciado: "Where does 'rarely' go in the sentence 'I leave the office before six'?",
-      opciones: [
-        "I leave rarely the office before six.",
-        "Rarely I leave the office before six.",
-        "I leave the office rarely before six.",
-        "I rarely leave the office before six."
+        "doesn't consider",
+        "isn't consider",
+        "not is considered",
+        "isn't considered"
       ],
       correcta: 3,
-      explicacion: "Los adverbios de frecuencia van delante del verbo principal. La excepción es el verbo to be, donde van detrás: I am rarely late. En español el adverbio se mueve con mucha libertad, y de ahí sale el error."
+      explicacion: "En el pasivo la negación va en el auxiliar be: isn't considered. Doesn't consider es activo y cambia el sentido, porque diría que la comida no considera algo."
     },
     {
-      enunciado: "A swimmer tells you: 'I need at least eight hours of sleep.' How do you say this about her?",
+      enunciado: "Where does a frequency adverb like 'often' or 'usually' go in a passive sentence?",
       opciones: [
-        "She needs at least eight hours of sleep.",
-        "She need at least eight hours of sleep.",
-        "She is needing at least eight hours of sleep.",
-        "She needing at least eight hours of sleep."
+        "Between 'be' and the past participle",
+        "Before the verb 'be'",
+        "At the beginning of the sentence",
+        "After the object"
       ],
       correcta: 0,
-      explicacion: "En present simple la tercera persona del singular lleva -s. Además need es un verbo de estado: no se usa en continuous aunque estés hablando del presente."
+      explicacion: "Se mete en el medio: are often served, is usually included, is often grated. El adverbio parte el verbo en dos, que es justo lo que en español no hacemos."
     },
     {
-      enunciado: "You go to the cinema about once every two months. Which expression fits best?",
+      enunciado: "Miso soup is made ___ miso paste and broth, and it is eaten ___ millions of people every day.",
       opciones: [
-        "every now and again",
-        "most days",
-        "three times a week",
-        "always"
-      ],
-      correcta: 0,
-      explicacion: "Every now and again describe algo ocasional y sin regularidad fija. Most days y three times a week son mucho más frecuentes, y always es constante."
-    },
-    {
-      enunciado: "Someone says: 'He's always leaving his dishes in the sink.' Why the present continuous with 'always'?",
-      opciones: [
-        "Because it is a plan for next week",
-        "Because 'always' can only be used with the continuous",
-        "Because it is a temporary change he started this month",
-        "Because it stresses that it happens over and over again"
-      ],
-      correcta: 3,
-      explicacion: "Con always el present continuous no marca algo temporal sino algo que se repite todo el tiempo, casi como un rasgo de la persona. Muchas veces lleva un tono de queja, y ahí está la diferencia con He always leaves his dishes in the sink, que es un dato neutro."
-    },
-    {
-      enunciado: "It's important to ___ an effort to call old friends every now and again.",
-      opciones: [
-        "do",
-        "take",
-        "make",
-        "have"
+        "by / with",
+        "with / with",
+        "with / by",
+        "by / by"
       ],
       correcta: 2,
-      explicacion: "En inglés se dice make an effort. Como en español decimos hacer un esfuerzo, la tentación es traducir con do, pero suena mal. Pasa lo mismo con make a decision y make a mistake."
+      explicacion: "With introduce el ingrediente o la herramienta; by introduce a quien hace la acción. La sopa se hace con pasta de miso, pero la comen personas. Confundir las dos es un error muy común."
     },
     {
-      enunciado: "It's a good idea to focus ___ changing one habit at a time.",
+      enunciado: "Which of these sentences is in the passive voice?",
       opciones: [
-        "in",
-        "at",
-        "to",
-        "on"
-      ],
-      correcta: 3,
-      explicacion: "El verbo es focus on. Como en español es enfocarse en, muchos hispanohablantes dicen focus in. La preposición se aprende pegada al verbo, no se traduce."
-    },
-    {
-      enunciado: "Your friend says she is trying out a new evening routine to sleep better. What does this mean?",
-      opciones: [
-        "She has already found the routine that works for her",
-        "She is testing it to see whether it works",
-        "She is making a big effort but failing",
-        "She has decided to stop going to bed late"
+        "The chef is preparing the sauce.",
+        "The tables are cleaned after every service.",
+        "The restaurant opens at seven every morning.",
+        "My grandmother makes the best empanadas."
       ],
       correcta: 1,
-      explicacion: "To try something out es probar algo para ver qué tal resulta, sin haber decidido todavía. No confundir con to try hard, que es esforzarse."
+      explicacion: "La trampa está en la primera: lleva is, pero preparing es gerundio, así que es present continuous activo. El pasivo necesita be más participio, como en are cleaned."
     },
     {
-      enunciado: "A colleague says it is difficult for him to stick to a routine. What is difficult for him?",
+      enunciado: "A recipe says 'The dough is left to rest for an hour' instead of 'You leave the dough to rest for an hour'. Why?",
       opciones: [
-        "Designing a routine in the first place",
-        "Explaining his routine to other people",
-        "Keeping to the routine over time",
-        "Changing his routine when he needs to"
+        "Because the passive sounds more polite",
+        "Because recipes are always written in the passive by rule",
+        "Because who does it is obvious and unimportant: the focus is the process",
+        "Because the sentence has no subject"
       ],
       correcta: 2,
-      explicacion: "To stick to something es mantenerlo, seguirlo sin abandonarlo. El problema no es armar la rutina sino sostenerla."
+      explicacion: "El pasivo se usa cuando quién hace la acción es obvio, desconocido o irrelevante. En una receta ya se sabe que lo hacés vos, y lo que importa es el proceso. Además la frase pasiva sí tiene sujeto: es the dough."
     },
     {
-      enunciado: "What does the expression 'No two days are the same' tell you about someone's job?",
+      enunciado: "Why choose 'Muesli is enjoyed by many people around the world' instead of the active version?",
       opciones: [
-        "They work exactly the same hours every day",
-        "They only work two days a week",
-        "They do not enjoy their job",
-        "Their days are all different from each other"
-      ],
-      correcta: 3,
-      explicacion: "Es una expresión hecha: literalmente no hay dos días iguales. Describe variedad, no una queja ni un horario concreto."
-    },
-    {
-      enunciado: "Which of these is an example of self-care?",
-      opciones: [
-        "Going for a walk with a friend after a long day",
-        "Staying late at the office to finish a project",
-        "Checking your work email before going to sleep",
-        "Skipping lunch so you can get more done"
+        "It puts muesli first and avoids a long subject",
+        "The passive is grammatically more correct",
+        "The active version would be impossible in English",
+        "The passive lets you leave out the verb"
       ],
       correcta: 0,
-      explicacion: "Self-care son las cosas que hacés para cuidar tu propio bienestar. Las otras tres son lo contrario: poner el trabajo por delante tuyo."
+      explicacion: "El texto habla del muesli, así que conviene arrancar por ahí. Además, many people around the world es un sujeto largo y pesado al principio de la frase; el pasivo lo manda al final."
     },
     {
-      enunciado: "A colleague brings you a coffee on a hard morning and you say: 'That made my day!' What are you expressing?",
+      enunciado: "Your friend says she prefers savoury food at breakfast. What will she probably choose?",
       opciones: [
-        "That you are annoyed and very busy",
-        "That your working day is now finished",
-        "That the small gesture made you feel really good",
-        "That you had planned it that way"
+        "Pancakes with maple syrup",
+        "A chocolate pastry",
+        "Fruit with honey",
+        "Toast with cheese and tomato"
+      ],
+      correcta: 3,
+      explicacion: "Savoury es todo lo que no es dulce. No lo confundas con salty, que es específicamente con mucha sal: una tortilla es savoury aunque no esté salada."
+    },
+    {
+      enunciado: "Hot chocolate is used as a dip for churros. What does this mean?",
+      opciones: [
+        "It is drunk before eating the churros",
+        "The churros are put into it",
+        "It is poured over the churros",
+        "It is added to the dough before frying"
+      ],
+      correcta: 1,
+      explicacion: "Un dip es una salsa espesa donde metés el alimento antes de comerlo. Si lo tirás por encima no es un dip, es una salsa servida sobre el plato."
+    },
+    {
+      enunciado: "Someone tells you they have a sweet tooth. What does this tell you about them?",
+      opciones: [
+        "They have a dental problem",
+        "They avoid sugar completely",
+        "They love sugary food",
+        "They prefer salty snacks"
       ],
       correcta: 2,
-      explicacion: "(It) made my day se dice cuando algo lindo te alegra el día, aunque sea un detalle mínimo. No tiene nada que ver con terminar la jornada."
+      explicacion: "To have a sweet tooth es ser goloso. Es una expresión hecha: nada que ver con los dientes de verdad."
+    },
+    {
+      enunciado: "A colleague says the report is a dog's dinner. What do they mean?",
+      opciones: [
+        "It is a mess, badly done",
+        "It is finished and ready to send",
+        "It is far too long",
+        "It is surprisingly good"
+      ],
+      correcta: 0,
+      explicacion: "A dog's dinner es un desastre, algo hecho de cualquier manera. Suele ir con make: they made a dog's dinner of it."
     }
   ]
 };
