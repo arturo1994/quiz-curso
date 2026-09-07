@@ -50,6 +50,12 @@
   .clase-num{font-family:var(--serif);font-size:1.35rem;color:var(--azul)}
   .clase-titulo{font-weight:500}
   .clase-meta{color:var(--tinta-suave);font-size:.875rem;white-space:nowrap}
+  .seccion{margin:0 0 2.75rem}
+  .seccion:last-of-type{margin-bottom:0}
+  .seccion-titulo{
+    font-family:var(--serif);font-size:1.25rem;font-weight:600;
+    line-height:1.3;margin:0 0 .8rem;
+  }
   .nota{margin-top:2.5rem;color:var(--tinta-suave);font-size:.9rem}
 
   .barra-sup{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:1.5rem}
@@ -118,38 +124,46 @@
   <h1 class="curso-titulo">Lingoda English B1</h1>
   <p class="curso-dato">4 clases, 55 preguntas en total</p>
 
-  <!-- Para agregar una clase: duplicá un bloque <li> y cambiá el archivo,
-       el número y el título. -->
-  <ul class="lista">
-        <li>
-          <a class="clase" href="clase-01.html">
-            <span class="clase-num">1</span>
-            <span class="clase-titulo">Making changes to my routine (EN_B1_2011X)</span>
-            <span class="clase-meta">13 preguntas</span>
-          </a>
-        </li>
-        <li>
-          <a class="clase" href="clase-02.html">
-            <span class="clase-num">2</span>
-            <span class="clase-titulo">Using the present simple passive (EN_B1_2012G)</span>
-            <span class="clase-meta">14 preguntas</span>
-          </a>
-        </li>
-        <li>
-          <a class="clase" href="clase-03.html">
-            <span class="clase-num">3</span>
-            <span class="clase-titulo">Discussing fitness trends (EN_B1_2013X)</span>
-            <span class="clase-meta">14 preguntas</span>
-          </a>
-        </li>
-        <li>
-          <a class="clase" href="clase-04.html">
-            <span class="clase-num">4</span>
-            <span class="clase-titulo">Talking about lifestyle choices (EN_B1_2014C)</span>
-            <span class="clase-meta">14 preguntas</span>
-          </a>
-        </li>
-  </ul>
+  <!-- Para agregar una clase: duplicá un bloque <li> dentro de la sección que
+       corresponda y cambiá el archivo, el número y el título. El número sigue
+       al nombre del archivo (clase-05.html va con el 5), así que no se
+       reinicia en cada sección.
+
+       Para abrir una sección nueva: duplicá el bloque <section> entero,
+       cambiá el <h2> y dejá adentro solo las clases de esa sección. -->
+  <section class="seccion">
+    <h2 class="seccion-titulo">Puedo hablar sobre opciones de estilo de vida en inglés</h2>
+    <ul class="lista">
+      <li>
+        <a class="clase" href="clase-01.html">
+          <span class="clase-num">1</span>
+          <span class="clase-titulo">Making changes to my routine (EN_B1_2011X)</span>
+          <span class="clase-meta">13 preguntas</span>
+        </a>
+      </li>
+      <li>
+        <a class="clase" href="clase-02.html">
+          <span class="clase-num">2</span>
+          <span class="clase-titulo">Using the present simple passive (EN_B1_2012G)</span>
+          <span class="clase-meta">14 preguntas</span>
+        </a>
+      </li>
+      <li>
+        <a class="clase" href="clase-03.html">
+          <span class="clase-num">3</span>
+          <span class="clase-titulo">Discussing fitness trends (EN_B1_2013X)</span>
+          <span class="clase-meta">14 preguntas</span>
+        </a>
+      </li>
+      <li>
+        <a class="clase" href="clase-04.html">
+          <span class="clase-num">4</span>
+          <span class="clase-titulo">Talking about lifestyle choices (EN_B1_2014C)</span>
+          <span class="clase-meta">14 preguntas</span>
+        </a>
+      </li>
+    </ul>
+  </section>
 
   <p class="nota">Cada clase es un archivo aparte. Las preguntas y las respuestas
   aparecen en orden distinto cada vez.</p>
